@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAIRO-INYA MUNICIPALITY | Nyahururu</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#0b4f6c;
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h1{
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd166;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1470&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h2{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    max-width:800px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.hero-content button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    background:#ffd166;
+    color:#000;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    background:white;
+}
+
+/* ABOUT SECTION */
+
+.section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:40px;
+    color:#0b4f6c;
+    margin-bottom:10px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:12px;
+}
+
+.about-text p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#0b4f6c;
+}
+
+/* PROJECTS */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-card .content{
+    padding:20px;
+}
+
+.project-card h3{
+    margin-bottom:10px;
+    color:#0b4f6c;
+}
+
+/* NEWS */
+
+.news{
+    background:#0b4f6c;
+    color:white;
+    text-align:center;
+}
+
+.news-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.news-card{
+    background:white;
+    color:#222;
+    padding:25px;
+    border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#062d3d;
+    color:white;
+    padding:50px 8%;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+footer h3{
+    margin-bottom:20px;
+}
+
+footer p{
+    line:1.8;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:40px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    padding-top:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero-content h2{
+        font-size:38px;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <h1>Mairo Inya Municipality</h1>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+    <h2>Welcome to Mairo-Inya Municipality</h2>
+
+    <p>
+        Building a modern, clean, sustainable and economically vibrant municipality
+        serving the people of Kirita, Mairo-Inya and surrounding communities.
+    </p>
+
+    <button>Explore Services</button>
+</div>
+
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mairo Inya Municipality</title>
+
+<style>
+
+/* REMOVE DEFAULT SPACING */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* HERO SECTION */
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* VIDEO */
+.hero video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/* TEXT OVER VIDEO */
+.hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    background:rgba(0,0,0,0.4);
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+}
+
+
+
+
+<!-- ABOUT -->
+<section class="section">
+
+<div class="section-title">
+    <h2>About The Municipality</h2>
+    <p>Transforming urban governance and public service delivery.</p>
+</div>
+
+<div class="about">
+
+    <img src="face.jpeg">
+
+    <div class="about-text">
+
+        <p>
+            Mairo Inya Municipality is located within the greater Nyahururu region
+            and focuses on sustainable urban development, infrastructure growth,
+            environmental conservation and efficient public service delivery.
+        </p>
+
+        <p>
+            The municipality aims to create opportunities for businesses,
+            youth empowerment, tourism growth and improved living standards
+            for all residents.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" style="background:white;">
+
+<div class="section-title">
+    <h2>Municipal Services</h2>
+</div>
+
+<div class="services">
+
+    <div class="service-card">
+        <h3>Urban Planning</h3>
+        <p>Modern zoning, infrastructure and development approvals.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Waste Management</h3>
+        <p>Clean environment initiatives and garbage collection services.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Business Licensing</h3>
+        <p>Easy access to permits and municipal licensing services.</p>
+    </div>
+
+    <div class="service-card">
+        <h3>Road Development</h3>
+        <p>Construction and maintenance of roads and drainage systems.</p>
+    </div>
+
+</div>
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+    <!-- VIDEO -->
+    <video autoplay muted loop>
+        <source src="
+        " type="video/mp4">
+    </video>
+
+    <!-- TEXT -->
+    <div class="hero-content">
+        <h1>Welcome to Mairo Inya Municipality</h1>
+        <p>Building a modern and sustainable future.</p>
+    </div>
+
+</section>
+
+</body>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="section">
+
+<div class="section-title">
+    <h2>Ongoing Projects</h2>
+</div>
+
+<div class="projects">
+
+    <div class="project-card">
+
+        <img src="streets.webp">
+
+        <div class="content">
+            <h3>Smart Street Lighting</h3>
+            <p>Installation of modern lighting systems across urban centers.</p>
+        </div>
+
+    </div>
+
+    <div class="project-card">
+
+        <img src="Ma4.jpg">
+
+        <div class="content">
+            <h3>Modern Market Upgrade</h3>
+            <p>Improving business spaces for traders and SMEs.</p>
+        </div>
+
+    </div>
+
+    <div class="project-card">
+        <img src="road.jpg">
+
+        <div class="content">
+            <h3>Road Expansion</h3>
+            <p>Expanding road networks to improve transportation.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- NEWS -->
+
+<section class="section news">
+
+<div class="section-title">
+    <h2 style="color:white;">Latest News & Notices</h2>
+</div>
+
+<div class="news-container">
+
+    <div class="news-card">
+        <h3>Public Participation Forum</h3>
+        <p>Residents invited to contribute to urban planning discussions.</p>
+    </div>
+
+    <div class="news-card">
+        <h3>Clean Environment Campaign</h3>
+        <p>Municipality launches a weekly town clean-up exercise.</p>
+    </div>
+
+    <div class="news-card">
+        <h3>Digital Service Portal</h3>
+        <p>Online applications for permits and licenses now available.</p>
+    </div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+    <div>
+        <h3>Mairo-Inya Municipality</h3>
+        <p>
+            Serving the people of Mairo-inya, kirita, shamata and its enviros through innovation,
+            accountability and sustainable urban development.
+        </p>
+    </div>
+
+    <div>
+        <h3>Quick Links</h3>
+        <p>About Us</p>
+        <p>Projects</p>
+        <p>Public Notices</p>
+        <p>Citizen Services</p>
+    </div>
+
+    <div>
+        <h3>Contact Us</h3>
+        <p>Nyahururu, Nyandarua County</p>
+        <p>Email: info@mairoinyamunicipality.go.ke</p>
+        <p>Phone: +254721360119</p>
+    </div>
+
+</div>
+
+<div class="copyright">
+    <p>© 2026 Mairo-Inya Municipality. All Rights Reserved.</p>
+</div>
+
+</footer>
+
+</body>
+</html>

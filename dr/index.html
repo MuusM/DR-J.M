@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr John Muita | Medical Clinic</title>
+
+<style>
+
+/* GLOBAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f9ff;
+    color:#222;
+    line-height:1.6;
+}
+
+/* NAVBAR */
+
+nav{
+    background:linear-gradient(90deg,#0077b6,#00b4d8);
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h1{
+    font-size:30px;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd60a;
+}
+
+/* HERO */
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1470&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    max-width:800px;
+    margin:auto;
+}
+
+.hero-content button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    background:#ffd60a;
+    color:#000;
+    font-weight:bold;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:18px;
+}
+
+.hero-content button:hover{
+    background:white;
+}
+
+/* SECTION */
+
+.section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#0077b6;
+}
+
+.section-title p{
+    color:#555;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about-text h3{
+    color:#0077b6;
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border-top:5px solid #00b4d8;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card h3{
+    color:#0077b6;
+    margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats{
+    background:linear-gradient(90deg,#0077b6,#00b4d8);
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stats-grid h2{
+    font-size:50px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* CONTACT */
+
+.contact{
+    background:white;
+    border-radius:15px;
+    padding:40px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.contact button{
+    background:#0077b6;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.contact button:hover{
+    background:#023e8a;
+}
+
+/* FOOTER */
+
+footer{
+    background:#023e8a;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h2{
+        font-size:40px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1>Dr John Muita</h1>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Your Health Comes First</h2>
+
+<p>
+Professional, compassionate and modern healthcare services
+for individuals and families.
+</p>
+
+<button>Book Appointment</button>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>About Dr John Muita</h2>
+<p>Dedicated to quality healthcare and patient wellbeing.</p>
+</div>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1470&auto=format&fit=crop">
+
+<div class="about-text">
+
+<h3>Experienced Medical Professional</h3>
+
+<p>
+Dr John Muita is a compassionate healthcare provider committed
+to delivering modern, reliable and patient-centered treatment.
+With years of experience in general medicine and family healthcare,
+the clinic focuses on wellness, prevention and treatment.
+</p>
+
+<p>
+The clinic combines professional care, modern medical technology
+and personalized attention for every patient.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" style="background:#eef7ff;">
+
+<div class="section-title">
+<h2>Medical Services</h2>
+<p>Comprehensive healthcare services for all patients.</p>
+</div>
+
+<div class="services">
+
+<div class="service-card">
+<h3>General Consultation</h3>
+<p>Professional diagnosis and treatment for common illnesses.</p>
+</div>
+
+<div class="service-card">
+<h3>Family Healthcare</h3>
+<p>Comprehensive medical care for children and adults.</p>
+</div>
+
+<div class="service-card">
+<h3>Laboratory Services</h3>
+<p>Modern testing and accurate medical laboratory diagnostics.</p>
+</div>
+
+<div class="service-card">
+<h3>Maternal Care</h3>
+<p>Prenatal and postnatal healthcare services for mothers.</p>
+</div>
+
+<div class="service-card">
+<h3>Vaccination</h3>
+<p>Routine immunization and vaccination programs.</p>
+</div>
+
+<div class="service-card">
+<h3>Emergency Care</h3>
+<p>Fast response and urgent medical attention services.</p>
+</div>
+
+<div class="service-card">
+<h3>Pharmacy Services</h3>
+<p>Reliable prescription and medication support.</p>
+</div>
+
+<div class="service-card">
+<h3>Health Checkups</h3>
+<p>Regular wellness screenings and preventive healthcare.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="section stats">
+
+<div class="stats-grid">
+
+<div>
+<h2>10+</h2>
+<p>Years Experience</p>
+</div>
+
+<div>
+<h2>1000+</h2>
+<p>Patients Treated</p>
+</div>
+
+<div>
+<h2>24/7</h2>
+<p>Emergency Support</p>
+</div>
+
+<div>
+<h2>100%</h2>
+<p>Patient Care</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Clinic Gallery</h2>
+<p>Modern healthcare environment and facilities.</p>
+</div>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1470&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1470&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Book appointments or reach out for medical assistance.</p>
+</div>
+
+<div class="contact">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Dr John Muita Medical Clinic | All Rights Reserved</p>
+
+<p>Nyahururu, Kenya | Phone: +254 799662997</p>
+
+</footer>
+
+</body>
+</html>

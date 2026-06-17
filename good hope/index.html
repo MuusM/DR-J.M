@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Good Hope Hospital Nyahururu</title>
+
+<style>
+
+/* GLOBAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f9ff;
+    color:#222;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+
+nav{
+    background:linear-gradient(90deg,#0077b6,#00b4d8);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h1{
+    color:white;
+    font-size:30px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd60a;
+}
+
+/* HERO */
+
+.hero{
+    height:95vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1470&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+    padding:20px;
+}
+
+.hero-content h2{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    max-width:850px;
+    margin:auto;
+    font-size:22px;
+}
+
+.hero-content button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    background:#ffd60a;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-content button:hover{
+    background:white;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#0077b6;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about-text h3{
+    color:#0077b6;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+/* SERVICES */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    border-top:5px solid #00b4d8;
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card h3{
+    color:#0077b6;
+    margin-bottom:15px;
+}
+
+/* STATS */
+
+.stats{
+    background:linear-gradient(90deg,#0077b6,#00b4d8);
+    color:white;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    text-align:center;
+}
+
+.stats-grid h2{
+    font-size:55px;
+}
+
+/* CONTACT */
+
+.contact-container{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-info{
+    margin-bottom:30px;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.contact-form button{
+    background:#0077b6;
+    color:white;
+    padding:15px 30px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.contact-form button:hover{
+    background:#023e8a;
+}
+
+/* FOOTER */
+
+footer{
+    background:#023e8a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h2{
+        font-size:42px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h1>Good Hope Hospital</h1>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h2>Good Hope Hospital Nyahururu</h2>
+
+<p>
+Providing compassionate, reliable and modern healthcare services
+to families and communities in Nyahururu and beyond.
+</p>
+
+<button>Book Appointment</button>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>About Us</h2>
+<p>Committed to excellence in healthcare and patient wellbeing.</p>
+</div>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop">
+
+<div class="about-text">
+
+<h3>Your Trusted Healthcare Partner</h3>
+
+<p>
+Good Hope Hospital Nyahururu is a dedicated healthcare institution focused on delivering quality, affordable and compassionate medical care to individuals and families across Nyahururu and surrounding communities.
+</p>
+
+<p>
+The hospital combines experienced healthcare professionals, modern medical technology and patient-centered care to ensure every patient receives proper diagnosis, treatment and support.
+</p>
+
+<p>
+At Good Hope Hospital, we believe healthcare should be accessible, reliable and delivered with dignity. Our mission is to improve the wellbeing of the community through professional medical services, preventive healthcare and emergency response support.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" style="background:#eef7ff;">
+
+<div class="section-title">
+<h2>Our Services</h2>
+<p>Comprehensive medical solutions under one roof.</p>
+</div>
+
+<div class="services">
+
+<div class="service-card">
+<h3>General Consultation</h3>
+<p>Professional diagnosis and treatment for everyday health conditions.</p>
+</div>
+
+<div class="service-card">
+<h3>Emergency Services</h3>
+<p>Fast and reliable emergency medical attention available 24/7.</p>
+</div>
+
+<div class="service-card">
+<h3>Maternity Care</h3>
+<p>Comprehensive prenatal, delivery and postnatal services.</p>
+</div>
+
+<div class="service-card">
+<h3>Laboratory Services</h3>
+<p>Accurate testing and diagnostic laboratory services.</p>
+</div>
+
+<div class="service-card">
+<h3>Pharmacy</h3>
+<p>Quality medicines and prescription support for patients.</p>
+</div>
+
+<div class="service-card">
+<h3>Family Healthcare</h3>
+<p>Healthcare services for adults, children and senior citizens.</p>
+</div>
+
+<div class="service-card">
+<h3>Vaccination</h3>
+<p>Routine immunization and preventive healthcare programs.</p>
+</div>
+
+<div class="service-card">
+<h3>Health Checkups</h3>
+<p>Regular wellness screening and preventive medical examinations.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="section stats">
+
+<div class="stats-grid">
+
+<div>
+<h2>24/7</h2>
+<p>Emergency Support</p>
+</div>
+
+<div>
+<h2>10+</h2>
+<p>Years Serving Community</p>
+</div>
+
+<div>
+<h2>5000+</h2>
+<p>Patients Assisted</p>
+</div>
+
+<div>
+<h2>100%</h2>
+<p>Patient Commitment</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Contact Information</h2>
+<p>Reach us for appointments and medical assistance.</p>
+</div>
+
+<div class="contact-container">
+
+<div class="contact-info">
+
+<p><strong>Hospital:</strong> Good Hope Hospital Nyahururu</p>
+
+<p><strong>Location:</strong> Sharpe Road, Muchina Complex, Nyahururu, Kenya</p>
+
+<p><strong>Phone:</strong> +254 65 203 2357</p>
+
+<p><strong>Mobile:</strong> +254 721 629252</p>
+
+<p><strong>Email:</strong> good_hope07@yahoo.com</p>
+
+</div>
+
+<div class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 Good Hope Hospital Nyahururu | All Rights Reserved</p>
+
+<p>Sharpe Road, Nyahururu, Kenya</p>
+
+</footer>
+
+</body>
+</html>
